@@ -1,5 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
+namespace: argocd-app
 metadata:
   name: nginx-deployment
 spec:
@@ -16,4 +17,4 @@ spec:
       - name: nginx-container
         image: nginx:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8095
